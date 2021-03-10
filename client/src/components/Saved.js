@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import BookList from './BookList';
+
 import API from "../utils/API"
 import SavedBook from "./SavedBook"
 
 export default function Saved() {
     const [books, setBooks] = useState([])
-
 
     useEffect(() => {
         loadBooks()
@@ -19,11 +18,6 @@ export default function Saved() {
           )
           .catch(err => console.log(err));
       };
-
-
-
-
-
 
     return (
       <div className="App">

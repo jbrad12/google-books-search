@@ -12,6 +12,7 @@ export default function Book({ books, saveBooks}) {
         
         return (
             <div className="book">
+                
                 <h3>{data.volumeInfo.title}</h3>
                 <h4>{data.volumeInfo.authors}</h4>
                 <img src={image} alt="book" />
@@ -20,8 +21,11 @@ export default function Book({ books, saveBooks}) {
             </div>
         )
     })
+    let header = ""
+    if (data) {header = <h1>Results</h1>}
     return (
       <div className="App">
+          {header}
           {data}
       </div>
     );

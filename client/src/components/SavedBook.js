@@ -1,6 +1,6 @@
 export default function SavedBook({ books }) {
 
-console.log(books)
+
 
 const data = books.map(data => {
     let image = ""
